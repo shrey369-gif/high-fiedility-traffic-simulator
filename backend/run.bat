@@ -1,0 +1,3 @@
+@echo off
+echo Starting Traffic Simulation Server...
+java -cp build com.traffic.Main %*
