@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Indian Traffic Simulation — Project README
 
 **Accelerating High-Fidelity Road Network Modeling for Indian Traffic Simulations**
@@ -89,3 +90,6 @@ Navigate to `http://localhost:3000`
 | Animations | Framer Motion |
 | Charts | Recharts |
 | Rendering | HTML5 Canvas 2D |
+=======
+# high-fiedility-traffic-simulator
+>>>>>>> b4aafd6a464ea27474b18c6968502624f03d3b6d
