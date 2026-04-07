@@ -7,6 +7,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/dashboard", label: "Dashboard" },
   { href: "/scenarios", label: "Scenarios" },
+  { href: "/scenario-generator", label: "Generator" },
   { href: "/insights", label: "Insights" },
 ];
 

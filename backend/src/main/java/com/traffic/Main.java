@@ -12,7 +12,8 @@ public class Main {
             }
 
             System.out.println("╔══════════════════════════════════════════════════╗");
-            System.out.println("║  Indian Traffic Simulation Engine v1.0           ║");
+            System.out.println("║  Indian Traffic Simulation Engine v2.0           ║");
+            System.out.println("║  + MATLAB Scenario Generator Module              ║");
             System.out.println("║  Accelerating High-Fidelity Road Network Modeling║");
             System.out.println("╚══════════════════════════════════════════════════╝");
             System.out.println();
@@ -34,6 +35,11 @@ public class Main {
             System.out.println("  POST /api/scenario/create    - Load scenario");
             System.out.println("  GET  /api/insights/stats     - Traffic insights");
             System.out.println("  GET  /api/health             - Health check");
+            System.out.println();
+            System.out.println("Scenario Generator Endpoints:");
+            System.out.println("  POST /api/scenario/generate  - Generate road scenario");
+            System.out.println("  POST /api/scenario/export    - Export to MATLAB/RoadRunner");
+            System.out.println("  POST /api/scenario/osm-parse - Parse OSM data");
             System.out.println();
             System.out.println("Server ready. Waiting for connections...");
 

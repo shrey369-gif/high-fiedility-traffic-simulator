@@ -43,6 +43,33 @@ export async function getHealth() {
   return res.json();
 }
 
+export async function generateScenario(config) {
+  const res = await fetch(`${API_BASE}/api/scenario/generate`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(config),
+  });
+  return res.json();
+}
+
+export async function exportScenario(format) {
+  const res = await fetch(`${API_BASE}/api/scenario/export`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ format }),
+  });
+  return res.json();
+}
+
+export async function parseOSM(osmXml) {
+  const res = await fetch(`${API_BASE}/api/scenario/osm-parse`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ osmData: osmXml }),
+  });
+  return res.json();
+}
+
 export function createSSEConnection(onMessage, onError) {
   const eventSource = new EventSource(`${API_BASE}/api/simulation/stream`);
   

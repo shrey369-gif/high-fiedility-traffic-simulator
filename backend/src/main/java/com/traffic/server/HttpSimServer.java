@@ -2,6 +2,7 @@ package com.traffic.server;
 
 import com.sun.net.httpserver.*;
 import com.traffic.engine.SimulationEngine;
+import com.traffic.scenario.ScenarioGeneratorHandler;
 import com.traffic.util.JsonUtil;
 import java.io.*;
 import java.net.InetSocketAddress;
@@ -27,6 +28,10 @@ public class HttpSimServer {
         server.createContext("/api/scenario/create", this::handleScenarioCreate);
         server.createContext("/api/insights/stats", this::handleInsights);
         server.createContext("/api/health", this::handleHealth);
+
+        // Register scenario generator endpoints
+        ScenarioGeneratorHandler scenarioHandler = new ScenarioGeneratorHandler();
+        scenarioHandler.registerEndpoints(server);
 
         server.setExecutor(Executors.newFixedThreadPool(10));
     }
